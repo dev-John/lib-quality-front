@@ -1,11 +1,11 @@
-import React from 'react';
-import './App.css';
-import SearchComponent from './components/Search';
+import React from "react";
+import "./App.css";
+import Search from "./containers/Search";
 
 function App() {
   return (
     <div className="App">
-      <SearchComponent />
+      <Search />
     </div>
   );
 }

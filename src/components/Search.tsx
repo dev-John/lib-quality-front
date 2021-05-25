@@ -1,4 +1,3 @@
-import axios from "axios";
 import { Input } from "antd";
 import { Row, Col } from "antd";
 import ResultCard from "./ResultCard";
@@ -6,18 +5,10 @@ import { useState } from "react";
 
 const { Search } = Input;
 
-const SearchComponent = () => {
+const SearchComponent = ({ searchRepo }: any) => {
   const [authorization, setAuthorization] = useState(String);
   const [owner, setOwner] = useState(String);
   const [repo, setRepo] = useState(String);
-
-  const getRepoInfo = () => {
-    axios.get("get-repository", {
-      headers: {
-        authorization,
-      },
-    });
-  };
 
   return (
     <>
@@ -40,6 +31,7 @@ const SearchComponent = () => {
           <Search
             placeholder="Github Access Token"
             onChange={(e) => setAuthorization(e.target.value)}
+            onClick={searchRepo(authorization, owner, repo)}
             enterButton
           />
         </Col>

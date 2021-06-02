@@ -1,6 +1,6 @@
 import { Input } from "antd";
 import { Row, Col } from "antd";
-import ResultCard from "./ResultCard";
+import ResultCard from "../containers/Result";
 import { useState } from "react";
 
 const { Search } = Input;
@@ -26,18 +26,18 @@ const SearchComponent = ({ searchRepo }: any) => {
             onChange={(e) => setRepo(e.target.value)}
           />
         </Col>
-
         <Col span={12} offset={6}>
           <Search
             placeholder="Github Access Token"
             onChange={(e) => setAuthorization(e.target.value)}
-            onClick={searchRepo(authorization, owner, repo)}
+            onSearch={() => searchRepo(authorization, owner, repo)}
             enterButton
           />
         </Col>
+        <Col span={12} offset={6}>
+          <ResultCard />
+        </Col>
       </Row>
-
-      <ResultCard />
     </>
   );
 };

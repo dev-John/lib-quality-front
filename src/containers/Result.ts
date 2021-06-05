@@ -5,7 +5,9 @@ import ResultCard from "../components/ResultCard";
 import { searchRepo } from "../store/actions/search";
 
 const mapStateToProps = (state: any) => {
-  return { repo: state.search.repo };
+  const { repo, isFetching, errorMsg } = state.search;
+
+  return { repo, isFetching, errorMsg };
 };
 
 const mapDispatchToProperties = (dispatch: any) => ({

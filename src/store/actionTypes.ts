@@ -1,3 +1,4 @@
-export const IS_FETCHING = "IS_FETCHING";
-
+export const SET_FETCHING = "SET_FETCHING";
+export const SET_ERROR_MESSAGE = "SET_ERROR_MESSAGE";
 export const SET_REPO_INFO = "SET_REPO_INFO";
+export const CLEAR_REPO_INFO = "CLEAR_REPO_INFO";

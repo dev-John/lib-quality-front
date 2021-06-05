@@ -4,9 +4,9 @@ import { IS_FETCHING, SET_REPO_INFO } from "../actionTypes";
 const initialState = {
   isFetching: false,
   repo: {
-    openIssues: 0,
-    avgAge: 0,
-    stdAge: 0,
+    openIssues: null,
+    avgAge: null,
+    stdAge: null,
   },
 };
 

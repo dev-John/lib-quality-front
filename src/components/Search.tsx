@@ -35,7 +35,7 @@ const SearchComponent = ({ searchRepo }: any) => {
           />
         </Col>
         <Col span={12} offset={6}>
-          <ResultCard />
+          <ResultCard repoName={owner.concat("/").concat(repo)} />
         </Col>
       </Row>
     </>

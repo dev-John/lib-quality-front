@@ -25,7 +25,7 @@ const searchReducer = (state: Object = initialState, action: any = {}) => {
     case SET_REPO_INFO:
       return updateObject(state, { repo: action.payload.repoData });
     case CLEAR_REPO_INFO:
-      return updateObject(state, { repo: initialState.repo });
+      return updateObject(state, initialState);
 
     default:
       return state;

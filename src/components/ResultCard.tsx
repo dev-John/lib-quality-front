@@ -12,7 +12,7 @@ const ResultCard = ({ repoName, repo, isFetching, errorMsg }: any) => {
       ) : (
         ""
       )}
-      {repo && repo.openIssues ? (
+      {repo && repo.openIssues !== null ? (
         <Card style={{ width: "100%" }}>
           <Meta title={repoName} description="_____________________" />
           <br />

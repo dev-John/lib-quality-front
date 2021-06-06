@@ -1,4 +1,5 @@
 import { api } from "./../../helpers/conn";
+import { isSuccess } from "../actionUtilities";
 import {
   SET_REPO_INFO,
   SET_FETCHING,
@@ -38,11 +39,11 @@ export function searchRepo(authorization: string, owner: string, repo: string) {
         },
       })
       .then((result) => {
-        dispatch(setRepoInfo(result.data.data));
+        isSuccess(result)
+          ? dispatch(setRepoInfo(result.data.data))
+          : dispatch(setErrorMsg(result.data.message));
       })
-      .catch((err) => {
-        dispatch(setErrorMsg(err.message));
-      })
+      .catch((err) => console.log(err))
       .finally(() => dispatch(setFetching(false)));
   };
 }

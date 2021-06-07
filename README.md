@@ -2,6 +2,8 @@ A React, Redux, Typescript and Ant Design Frontend for getting Github repositori
 
 Backend is found [HERE](https://github.com/dev-John/lib-quality)
 
+See how to create a Github Access Token [HERE](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
 <img src="https://user-images.githubusercontent.com/28464939/121024587-bf0a6880-c77a-11eb-8631-45426290db45.png">
 
 <img src="https://user-images.githubusercontent.com/28464939/121023640-d8f77b80-c779-11eb-94c6-cfc4279fadaa.png" >
